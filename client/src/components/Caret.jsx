@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function Caret({ position, smooth, isBlinking }) {
+export function Caret({ position, smooth, isBlinking }){
   if (!position) return null;
 
   return (

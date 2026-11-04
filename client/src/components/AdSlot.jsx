@@ -13,7 +13,7 @@ import { useAppStore } from '../store/useAppStore.js';
  * @param {string} props.id Unique ad unit identifier (e.g. 'result-bottom', 'sidebar')
  * @param {string} [props.size='300x250'] Format width x height
  */
-export function AdSlot({ id = 'ad-slot', size = '300x250' }) {
+export function AdSlot({ id = 'ad-slot', size = '300x250' }){
   const testStatus = useAppStore((s) => s.testStatus);
 
   // Parse height from size e.g. '300x250' or default to 90px / 250px

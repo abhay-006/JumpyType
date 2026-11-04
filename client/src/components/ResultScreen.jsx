@@ -3,7 +3,7 @@ import { useAppStore } from '../store/useAppStore.js';
 import { WpmChart } from './WpmChart.jsx';
 import { AdSlot } from './AdSlot.jsx';
 
-export function ResultScreen({ onNextTest, onRepeatTest }) {
+export function ResultScreen({ onNextTest, onRepeatTest }){
   const lastResult = useAppStore((s) => s.lastResult);
 
   // Keyboard shortcuts on result screen: Tab or Enter for next test, r for repeat

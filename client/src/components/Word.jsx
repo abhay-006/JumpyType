@@ -10,7 +10,7 @@ export const Word = React.memo(function Word({
   isActive,
   wordIndex,
   onLetterMount,
-}) {
+}){
   const letters = word.split('');
   const extraLetters = typedLetters ? typedLetters.slice(letters.length) : [];
 

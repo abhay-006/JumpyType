@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAppStore } from '../store/useAppStore.js';
 
-export function Settings({ isOpen, onClose }) {
+export function Settings({ isOpen, onClose }){
   const settings = useAppStore((s) => s.settings);
   const updateSetting = useAppStore((s) => s.updateSetting);
 

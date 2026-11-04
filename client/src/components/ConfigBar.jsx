@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAppStore } from '../store/useAppStore.js';
 
-export function ConfigBar() {
+export function ConfigBar(){
   const settings = useAppStore((s) => s.settings);
   const updateSetting = useAppStore((s) => s.updateSetting);
   const initializeTest = useAppStore((s) => s.initializeTest);

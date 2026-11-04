@@ -7,7 +7,7 @@ import { calculateCharacterBreakdown, calculateWpm, calculateRawWpm } from '../e
 import { buildResult } from '../engine/buildResult.js';
 import { saveResult } from '../services/storage.js';
 
-export function TypingArea() {
+export function TypingArea(){
   const settings = useAppStore((s) => s.settings);
   const words = useAppStore((s) => s.words);
   const currentWordIndex = useAppStore((s) => s.currentWordIndex);
