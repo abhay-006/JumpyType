@@ -1,5 +1,6 @@
 import React from 'react';
 import { useAppStore } from '../store/useAppStore.js';
+import logo from '../../public/jumpytype.png';
 
 export function Navbar({ onOpenSettings }) {
   const settings = useAppStore((s) => s.settings);
@@ -31,8 +32,11 @@ export function Navbar({ onOpenSettings }) {
           }}
           title="Restart test"
         >
-          <span className="logo-icon">⌨</span>
+          <span className="logo-icon">
+            <img src={logo} alt="JumpyType Logo" />
+          </span>
           <span className="logo-text">JumpyType</span>
+          <span className="logo-icon">⌨</span>
         </a>
 
         <nav className="navbar__nav" aria-label="Primary navigation">

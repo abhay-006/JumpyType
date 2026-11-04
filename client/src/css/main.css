@@ -52,7 +52,7 @@ body {
   user-select: none;
 }
 .navbar__logo:hover { opacity: 0.85; }
-.logo-icon { font-size: 1.4rem; }
+.logo-icon { font-size: 1.4rem; img { width: 50px; height: 24px; } }
 
 /* Center nav */
 .navbar__nav {
