@@ -1,0 +1,242 @@
+/* ===== TYPING TEST AREA ===== */
+
+.test-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+/* === LIVE STATS === */
+.live-stats {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  justify-content: flex-start;
+  padding-bottom: var(--space-3);
+  min-height: 56px;
+}
+
+.live-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.live-stat__value {
+  font-family: var(--font-mono);
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--accent-color);
+  line-height: 1;
+  transition: color var(--transition-fast);
+}
+.live-stat__label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  margin-top: 2px;
+  text-transform: lowercase;
+}
+
+.live-timer .live-stat__value { color: var(--text-secondary); }
+.live-timer.warning .live-stat__value { color: var(--error-color); }
+
+/* === WORDS WRAPPER === */
+.words-wrapper {
+  position: relative;
+  background: transparent;
+  user-select: none;
+  cursor: text;
+  overflow: hidden;
+}
+
+/* Words display */
+.words-display {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  line-height: 1;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-typing);
+  color: var(--text-muted);
+  /* Show approx 3 rows */
+  max-height: calc(var(--font-size-typing) * 3.5 * 3);
+  overflow: hidden;
+  position: relative;
+  transition: max-height var(--transition-normal);
+}
+
+/* === WORD === */
+.word {
+  display: inline-flex;
+  position: relative;
+}
+
+/* === LETTER === */
+.letter {
+  position: relative;
+  display: inline-block;
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+}
+
+/* Correct */
+.letter.correct { color: var(--correct-color); }
+
+/* Incorrect */
+.letter.incorrect {
+  color: var(--error-color);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Extra (typed but not in word) */
+.letter.extra { color: var(--extra-color); opacity: 0.7; }
+
+/* Blind mode (errors hidden) */
+.blind-mode .letter.incorrect { color: var(--text-muted); text-decoration: none; }
+.blind-mode .letter.extra { color: var(--text-muted); }
+
+/* Word error outline */
+.word.word-incorrect .letter.incorrect { /* Already styled via .letter.incorrect */ }
+
+/* === CARET === */
+.caret {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  background-color: var(--caret-color);
+  border-radius: var(--radius-full);
+  pointer-events: none;
+  z-index: 10;
+  opacity: 1;
+  /* Height set by JS based on font size */
+  height: calc(var(--font-size-typing) * 1.5);
+}
+
+/* Blinking animation when idle */
+.caret.blinking {
+  animation: caretBlink 1s step-end infinite;
+}
+@keyframes caretBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Smooth movement */
+.caret.smooth {
+  transition: left 60ms ease, top 60ms ease;
+}
+
+/* Block caret style */
+.caret.block {
+  width: calc(var(--font-size-typing) * 0.6);
+  opacity: 0.35;
+  border-radius: var(--radius-sm);
+}
+
+/* === HIDDEN INPUT === */
+.hidden-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 1px;
+  height: 1px;
+  top: 0;
+  left: 0;
+  border: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* === TAP TO FOCUS (mobile) === */
+.tap-to-focus {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--space-8);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  border: 2px dashed var(--border-color);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+  user-select: none;
+}
+.tap-to-focus i { font-size: 1.5rem; }
+.tap-to-focus:hover {
+  border-color: var(--accent-color);
+  color: var(--text-secondary);
+}
+
+/* When words are visible (desktop), hide tap overlay */
+.words-wrapper.focused .tap-to-focus { display: none; }
+
+/* === TEST FOOTER === */
+.test-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  min-height: 48px;
+}
+
+/* Restart button */
+.restart-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; height: 40px;
+  border-radius: var(--radius-md);
+  color: var(--text-muted);
+  font-size: 1rem;
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+.restart-btn:hover {
+  color: var(--text-primary);
+  background: var(--bg-hover);
+}
+
+/* Caps lock warning */
+.caps-lock-warning {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: var(--error-bg);
+  color: var(--error-color);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  animation: fadeIn 0.2s ease;
+}
+
+/* === FOCUSED STATE === */
+.words-wrapper:not(.focused) .words-display {
+  filter: blur(3px);
+}
+.words-wrapper:not(.focused) .tap-to-focus {
+  display: flex;
+}
+
+/* Active word highlight */
+.word.active {
+  /* subtle underline for current word */
+}
+
+/* === COUNTDOWN ANIMATION === */
+@keyframes countdown-pulse {
+  0%   { opacity: 1; transform: scale(1); }
+  50%  { opacity: 0.6; transform: scale(1.04); }
+  100% { opacity: 1; transform: scale(1); }
+}
+.live-timer.tick .live-stat__value {
+  animation: countdown-pulse 0.3s ease;
+}
+

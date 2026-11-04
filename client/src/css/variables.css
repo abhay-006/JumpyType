@@ -1,0 +1,226 @@
+/* ===== CSS CUSTOM PROPERTIES (Design Tokens) ===== */
+:root {
+  /* ---- Fonts ---- */
+  --font-mono: 'Roboto Mono', 'Courier New', monospace;
+  --font-ui: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* ---- Spacing ---- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* ---- Border radius ---- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* ---- Transitions ---- */
+  --transition-fast: 100ms ease;
+  --transition-normal: 200ms ease;
+  --transition-slow: 350ms ease;
+
+  /* ---- Z-index scale ---- */
+  --z-base: 1;
+  --z-overlay: 100;
+  --z-modal: 200;
+  --z-toast: 300;
+
+  /* ---- Typing config ---- */
+  --font-size-typing: 20px;
+}
+
+/* ===========================
+   DARK THEME (default)
+   =========================== */
+[data-theme="dark"],
+.theme-dark {
+  --bg-primary:     #323437;
+  --bg-secondary:   #2c2e31;
+  --bg-tertiary:    #232527;
+  --bg-hover:       #3a3d40;
+
+  --text-primary:   #d1d0c5;
+  --text-secondary: #646669;
+  --text-muted:     #444649;
+
+  --accent-color:   #e2b714;
+  --accent-hover:   #f5cc1e;
+  --accent-dim:     rgba(226, 183, 20, 0.15);
+
+  --correct-color:  #d1d0c5;
+  --error-color:    #ca4754;
+  --error-bg:       rgba(202, 71, 84, 0.2);
+  --extra-color:    #ca4754;
+
+  --caret-color:    #e2b714;
+
+  --border-color:   rgba(255,255,255,0.06);
+  --shadow-sm:      0 2px 8px rgba(0,0,0,0.3);
+  --shadow-md:      0 4px 20px rgba(0,0,0,0.4);
+  --shadow-lg:      0 8px 40px rgba(0,0,0,0.5);
+
+  --navbar-bg:      #2c2e31;
+  --modal-bg:       #2c2e31;
+  --card-bg:        #2c2e31;
+
+  --scrollbar-thumb: #444649;
+  --scrollbar-track: #2c2e31;
+}
+
+/* ===========================
+   LIGHT THEME
+   =========================== */
+[data-theme="light"] {
+  --bg-primary:     #e1e1e3;
+  --bg-secondary:   #d9d9db;
+  --bg-tertiary:    #cecece;
+  --bg-hover:       #cacace;
+
+  --text-primary:   #2c2e31;
+  --text-secondary: #7c7c80;
+  --text-muted:     #b0b0b4;
+
+  --accent-color:   #db8f44;
+  --accent-hover:   #c97e33;
+  --accent-dim:     rgba(219, 143, 68, 0.15);
+
+  --correct-color:  #2c2e31;
+  --error-color:    #c03b47;
+  --error-bg:       rgba(192, 59, 71, 0.12);
+  --extra-color:    #c03b47;
+
+  --caret-color:    #db8f44;
+
+  --border-color:   rgba(0,0,0,0.08);
+  --shadow-sm:      0 2px 8px rgba(0,0,0,0.08);
+  --shadow-md:      0 4px 20px rgba(0,0,0,0.12);
+  --shadow-lg:      0 8px 40px rgba(0,0,0,0.16);
+
+  --navbar-bg:      #d9d9db;
+  --modal-bg:       #d9d9db;
+  --card-bg:        #d9d9db;
+
+  --scrollbar-thumb: #b0b0b4;
+  --scrollbar-track: #d9d9db;
+}
+
+/* ===========================
+   CARBON THEME
+   =========================== */
+[data-theme="carbon"] {
+  --bg-primary:     #1a1a1a;
+  --bg-secondary:   #141414;
+  --bg-tertiary:    #0e0e0e;
+  --bg-hover:       #222222;
+
+  --text-primary:   #c8c8c8;
+  --text-secondary: #555555;
+  --text-muted:     #383838;
+
+  --accent-color:   #36a3ff;
+  --accent-hover:   #5ab8ff;
+  --accent-dim:     rgba(54, 163, 255, 0.15);
+
+  --correct-color:  #c8c8c8;
+  --error-color:    #ff4f5e;
+  --error-bg:       rgba(255, 79, 94, 0.15);
+  --extra-color:    #ff4f5e;
+
+  --caret-color:    #36a3ff;
+
+  --border-color:   rgba(255,255,255,0.06);
+  --shadow-sm:      0 2px 8px rgba(0,0,0,0.5);
+  --shadow-md:      0 4px 20px rgba(0,0,0,0.6);
+  --shadow-lg:      0 8px 40px rgba(0,0,0,0.7);
+
+  --navbar-bg:      #141414;
+  --modal-bg:       #141414;
+  --card-bg:        #141414;
+
+  --scrollbar-thumb: #383838;
+  --scrollbar-track: #141414;
+}
+
+/* ===========================
+   ROSE THEME
+   =========================== */
+[data-theme="rose"] {
+  --bg-primary:     #1e1e2e;
+  --bg-secondary:   #181825;
+  --bg-tertiary:    #11111b;
+  --bg-hover:       #252537;
+
+  --text-primary:   #cdd6f4;
+  --text-secondary: #585b70;
+  --text-muted:     #45475a;
+
+  --accent-color:   #f38ba8;
+  --accent-hover:   #f5a0b8;
+  --accent-dim:     rgba(243, 139, 168, 0.15);
+
+  --correct-color:  #cdd6f4;
+  --error-color:    #f38ba8;
+  --error-bg:       rgba(243, 139, 168, 0.12);
+  --extra-color:    #f38ba8;
+
+  --caret-color:    #f38ba8;
+
+  --border-color:   rgba(255,255,255,0.06);
+  --shadow-sm:      0 2px 8px rgba(0,0,0,0.4);
+  --shadow-md:      0 4px 20px rgba(0,0,0,0.5);
+  --shadow-lg:      0 8px 40px rgba(0,0,0,0.6);
+
+  --navbar-bg:      #181825;
+  --modal-bg:       #181825;
+  --card-bg:        #181825;
+
+  --scrollbar-thumb: #45475a;
+  --scrollbar-track: #181825;
+}
+
+/* ===========================
+   MINT THEME
+   =========================== */
+[data-theme="mint"] {
+  --bg-primary:     #1b2b2b;
+  --bg-secondary:   #152323;
+  --bg-tertiary:    #0f1c1c;
+  --bg-hover:       #223535;
+
+  --text-primary:   #d2e8e0;
+  --text-secondary: #4a7060;
+  --text-muted:     #2e4f42;
+
+  --accent-color:   #88d4ab;
+  --accent-hover:   #a0e0bc;
+  --accent-dim:     rgba(136, 212, 171, 0.15);
+
+  --correct-color:  #d2e8e0;
+  --error-color:    #e07d7d;
+  --error-bg:       rgba(224, 125, 125, 0.12);
+  --extra-color:    #e07d7d;
+
+  --caret-color:    #88d4ab;
+
+  --border-color:   rgba(255,255,255,0.06);
+  --shadow-sm:      0 2px 8px rgba(0,0,0,0.3);
+  --shadow-md:      0 4px 20px rgba(0,0,0,0.4);
+  --shadow-lg:      0 8px 40px rgba(0,0,0,0.5);
+
+  --navbar-bg:      #152323;
+  --modal-bg:       #152323;
+  --card-bg:        #152323;
+
+  --scrollbar-thumb: #2e4f42;
+  --scrollbar-track: #152323;
+}
+

@@ -1,0 +1,80 @@
+{
+  "short": [
+    {
+      "text": "The quick brown fox jumps over the lazy dog.",
+      "source": "Classic"
+    },
+    {
+      "text": "To be or not to be, that is the question.",
+      "source": "Shakespeare"
+    },
+    {
+      "text": "All that glitters is not gold.",
+      "source": "Shakespeare"
+    },
+    {
+      "text": "Fortune favors the bold.",
+      "source": "Latin Proverb"
+    },
+    {
+      "text": "Practice makes perfect.",
+      "source": "Proverb"
+    },
+    {
+      "text": "Actions speak louder than words.",
+      "source": "Proverb"
+    },
+    {
+      "text": "The best time to plant a tree was twenty years ago. The second best time is now.",
+      "source": "Chinese Proverb"
+    },
+    {
+      "text": "Life is what happens when you are busy making other plans.",
+      "source": "John Lennon"
+    }
+  ],
+  "medium": [
+    {
+      "text": "Two roads diverged in a wood, and I took the one less traveled by, and that has made all the difference.",
+      "source": "Robert Frost"
+    },
+    {
+      "text": "You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose.",
+      "source": "Dr. Seuss"
+    },
+    {
+      "text": "In the middle of every difficulty lies opportunity. You never fail until you stop trying.",
+      "source": "Albert Einstein"
+    },
+    {
+      "text": "It does not matter how slowly you go as long as you do not stop. Perseverance is the key to success.",
+      "source": "Confucius"
+    },
+    {
+      "text": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+      "source": "Winston Churchill"
+    },
+    {
+      "text": "The journey of a thousand miles begins with one step. Take that step today and never look back.",
+      "source": "Lao Tzu"
+    }
+  ],
+  "long": [
+    {
+      "text": "Ask not what your country can do for you, ask what you can do for your country. The energy, the faith, the devotion which we bring to this endeavor will light our country and all who serve it, and the glow from that fire can truly light the world.",
+      "source": "JFK"
+    },
+    {
+      "text": "I have a dream that one day this nation will rise up and live out the true meaning of its creed. We hold these truths to be self-evident, that all men are created equal, and that they should live together in harmony and brotherhood.",
+      "source": "Martin Luther King Jr."
+    },
+    {
+      "text": "It is not the critic who counts, not the man who points out how the strong man stumbles, or where the doer of deeds could have done them better. The credit belongs to the man who is actually in the arena.",
+      "source": "Theodore Roosevelt"
+    },
+    {
+      "text": "The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it. Stay hungry, stay foolish.",
+      "source": "Steve Jobs"
+    }
+  ]
+}
